@@ -40,6 +40,20 @@ pip3 install torch-geometric
 ```
 
 
+
+
+Run the CNN with UAF for MNIST dataset
+```
+cd   Universal_Activation_Function/pytorch/
+python3   ./mnist_UAF.py 
+```
+
+
+
+
+
+
+
 Run the GCN2 with UAF for CORA dataset. The fold number is represented by the number at the end
 ```
 cd   Universal_Activation_Function/pytorch/
