@@ -1,4 +1,5 @@
 # Universal Activation Function
+
 Tensorflow and Pytorch source code for the paper 
 
 [Yuen, Brosnan, Minh Tu Hoang, Xiaodai Dong, and Tao Lu. "Universal activation function for machine learning." Scientific reports 11, no. 1 (2021): 1-11.](https://www.nature.com/articles/s41598-021-96723-8)
@@ -6,19 +7,54 @@ Tensorflow and Pytorch source code for the paper
 
 # Getting the code
 
+Requires [Docker](https://docs.docker.com/get-docker/) 
+
+
 Use git to pull this repo
 ```
 git clone https://github.com/SensorOrgNet/Universal_Activation_Function.git
 ```
 
 
+# Running the Tensorflow 2 version
+
+
+Install CUDA 11.2 container
+```
+docker run --name UAF --gpus all  -v /home/username/UAF/:/workspace  -w /workspace    -it  nvcr.io/nvidia/cuda:11.2.0-cudnn8-devel-ubuntu20.04   bash
+```
+
+
+Install python
+```
+apt update
+apt install python3-pip
+```
+
+
+Install pytorch and pytorch geometric
+```
+pip3 install tensorflow==2.7.0
+```
+
+
+
+
+Run the MLP with UAF for MNIST dataset
+```
+cd   Universal_Activation_Function/tensorflow/
+python3   ./mnist_UAF.py 
+```
+
+
+
+
+
+
 # Running the Pytorch version
 
 
-Requires [Docker](https://docs.docker.com/get-docker/) 
-
-
-Install pytorch container
+Install CUDA 11.3 container
 ```
 docker run --name UAF --gpus all  -v /home/username/UAF/:/workspace  -w /workspace    -it  nvcr.io/nvidia/cuda:11.3.0-cudnn8-devel-ubuntu20.04   bash
 ```
